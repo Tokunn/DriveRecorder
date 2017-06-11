@@ -1,0 +1,11 @@
+[Unit]
+Description=Start Rear Drive Reorder
+After=local-fs.target
+
+[Service]
+ExecStart=/home/pi/Program/DriveRecorder/Service/rear_recorder.py
+Restart = always
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

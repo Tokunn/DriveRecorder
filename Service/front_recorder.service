@@ -1,0 +1,11 @@
+[Unit]
+Description=Start Front Drive Reorder
+After=local-fs.target
+
+[Service]
+ExecStart=/home/pi/Program/DriveRecorder/Service/front_recorder.py
+Restart = always
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
